@@ -1,268 +1,132 @@
-# TestPilot-AI
-### An Agentic AI-Powered Software Quality Engineering Platform
+Act as a professional technical writer and senior full-stack developer.
 
-TestPilot-AI is an intelligent software quality engineering platform designed to support software development teams in managing requirements, test cases, test execution, defects and AI-assisted quality analysis through a unified environment.
+I want to UPDATE my existing root README.md file for my project:
 
-The project aims to explore how Agentic AI can enhance traditional Software Quality Assurance (SQA) workflows, improve testing efficiency and support better software quality management.
+TestPilot-AI – AI-Assisted Software Testing and Test Case Management System.
 
-**Project Status:** 🚧 Under Development
+IMPORTANT:
+- Update the existing README.md instead of creating another README.
+- First inspect the existing README and the actual project implementation.
+- Inspect the frontend, backend, database schema, package.json files, and API routes.
+- Understand which features are implemented and which are incomplete.
+- Do not make assumptions about project functionality.
+- Do not modify application source code.
+- Only modify the root README.md file.
 
----
-
-## 🎯 Project Objectives
-
-- Centralise software requirements and testing activities.
-- Improve traceability between requirements and test cases.
-- Organise test execution and defect tracking.
-- Explore AI-assisted software quality analysis.
-- Support collaboration between different software project roles.
-- Investigate intelligent automation in Software Quality Engineering.
-
----
-
-## ✨ Planned Core Modules
-
-### 1. User and Role Management
-Manage platform users and their responsibilities through role-based access.
-
-Planned roles:
-- Administrator
-- QA Engineer
-- Business Analyst
-- Developer
-- Project Manager
-
-### 2. Project Management
-Organise software projects and manage project-related information and team members.
-
-### 3. Requirements Management
-Create, organise and manage software requirements throughout the development lifecycle.
-
-### 4. Test Case Management
-Create and maintain test cases and establish relationships between requirements and test cases.
-
-### 5. Test Execution Management
-Organise test executions and maintain testing results.
-
-### 6. Defect Management
-Record, track and manage software defects identified during testing.
-
-### 7. AI-Assisted Quality Analysis
-Explore AI-powered analysis to support software quality engineering activities.
-
-*These modules describe the planned platform scope. They are not all implemented yet.*
-
----
-
-## 🛠️ Technology Stack
-
-| Component | Technology |
-|---|---|
-| Backend Runtime | Node.js |
-| Backend Framework | Express.js |
-| Database | PostgreSQL |
-| Database Client | node-postgres (`pg`) |
-| Authentication Development | bcrypt-based password handling |
-| Environment Configuration | dotenv |
-| Cross-Origin Support | CORS |
-| Development Tool | Nodemon |
-| Version Control | Git and GitHub |
-
-**Planned areas:** Frontend development, AI integration and QA automation.
-
----
-
-## 🏗️ System Architecture
-
-The planned architecture separates the user interface, backend services, database and AI-assisted capabilities.
-
-```text
-             USERS
-               |
-               v
-        FRONTEND APPLICATION
-               |
-               v
-          REST API
-               |
-               v
-       EXPRESS.JS BACKEND
-               |
-       +-------+-------+
-       |       |       |
-       v       v       v
-   SERVICES  ROUTES  MIDDLEWARE
-       |
-       v
-   POSTGRESQL DATABASE
-       |
-       v
-   AI ANALYSIS MODULE
-       |
-       v
- QUALITY INSIGHTS
-```
-
----
-
-## 🗄️ Database Design
-
-The PostgreSQL database is named `testpilot_ai`.
-
-The initial database design contains 10 tables:
-
-| Table | Purpose |
-|---|---|
-| roles | Stores system roles |
-| users | Stores user information |
-| projects | Stores project details |
-| project_members | Manages project membership |
-| requirements | Stores software requirements |
-| test_cases | Stores test case information |
-| requirement_test_cases | Connects requirements with test cases |
-| test_executions | Stores test execution records |
-| defects | Tracks identified defects |
-| ai_analysis_records | Stores AI analysis records |
-
-The initial database setup also includes five predefined roles:
-
-`ADMIN`, `QA_ENGINEER`, `BUSINESS_ANALYST`, `DEVELOPER`, `PROJECT_MANAGER`.
-
----
-
-## 📁 Backend Project Structure
-
-The backend is being organised using a modular structure.
-
-```text
-backend/
-│
-├── src/
-│   ├── config/
-│   │   └── database.js
-│   │
-│   ├── controllers/
-│   │
-│   ├── routes/
-│   │
-│   ├── middleware/
-│   │
-│   ├── services/
-│   │
-│   └── server.js
-│
-├── .env
-├── .gitignore
-└── package.json
-```
-
----
-
-## ⚙️ Getting Started
-
-### Prerequisites
-
-Install the following:
-
-- Node.js 24 or a compatible version
-- npm
+PROJECT TECHNOLOGY:
 - PostgreSQL
-- Git
+- Express.js
+- React.js
+- Node.js
+- JavaScript
+- JWT Authentication
+- bcrypt
+- Vite
 
-### 1. Clone the Repository
+Create a professional, modern, ATS-friendly GitHub README suitable for an undergraduate Software Engineering internship portfolio.
 
-```bash
-git clone https://github.com/malshi783/TestPilot-AI.git
-```
+Use the following structure:
 
-### 2. Navigate to the Backend
+1. Project Title
+   - TestPilot-AI
+   - A clear one-line project description.
+   - Relevant technology badges.
 
-```bash
-cd TestPilot-AI/backend
-```
+2. Overview
+   - Explain the problem this application addresses.
+   - Explain how it helps manage software testing activities.
+   - Keep the explanation professional and understandable.
 
-### 3. Install Dependencies
+3. Key Features
+   - User registration and login.
+   - JWT authentication.
+   - AI-assisted test case generation.
+   - Test case viewing and editing.
+   - Manual test execution.
+   - PASSED, FAILED, and SKIPPED statuses.
+   - Dashboard with testing statistics.
 
-```bash
-npm install
-```
+   IMPORTANT:
+   Only list features that are actually implemented.
+   Clearly identify partially implemented features.
 
-### 4. Configure Environment Variables
+4. Technology Stack
+   Organize frontend, backend, database, and development tools.
 
-Create a `.env` file in the backend directory.
+5. System Architecture
+   Explain the relationship between:
+   React Frontend → Express REST API → PostgreSQL Database.
 
-Add the database and server configuration required by the project.
+   Include a simple Mermaid architecture diagram if appropriate.
 
-Example configuration (adjust variable names to match `src/config/database.js`):
+6. Application Workflow
+   Explain the workflow:
+   Register/Login → Dashboard → Enter Requirement →
+   Generate Test Cases → Review/Edit → Manual Execution →
+   View Results.
 
-```env
-PORT=5000
+7. Project Structure
+   Inspect the actual folder structure and document the important directories and files.
+   Do not invent folders or files.
 
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=testpilot_ai
-DB_USER=your_postgres_username
-DB_PASSWORD=your_postgres_password
-```
+8. Database
+   Explain the actual database structure based on database/schema.sql.
+   Include only tables that genuinely exist.
 
-Never commit your actual `.env` file or database credentials to GitHub.
+9. Installation and Setup
+   Provide accurate instructions for:
+   - Prerequisites
+   - Cloning the repository
+   - Installing backend dependencies
+   - Installing frontend dependencies
+   - PostgreSQL database setup
+   - Environment variable configuration
+   - Running the backend
+   - Running the frontend
 
-### 5. Start the Development Server
+   Verify the commands against the actual package.json scripts.
 
-```bash
-npm run dev
-```
+10. Environment Variables
+    Explain the required backend and frontend environment variables.
+    Use placeholders only.
+    NEVER include real database passwords, JWT secrets, API keys, or personal credentials.
 
-The backend development server is configured to use port `5000`.
+11. API Endpoints
+    Inspect the actual backend routes and document the available endpoints.
+    Include HTTP methods and short descriptions.
+    Do not document endpoints that do not exist.
 
----
+12. Screenshots
+    Add a section with clearly identified placeholders only if screenshots are not available.
+    Do not create fake screenshots or broken image links.
 
-## 📌 Development Progress
+13. Current Limitations
+    Clearly explain important functionality that is not implemented.
+    Do not claim automated browser testing or Playwright integration unless it exists.
 
-| Component | Progress |
-|---|---|
-| Business Analysis | Completed |
-| Requirements Engineering | Completed |
-| System Architecture | Initial design completed |
-| Use Case Design | Completed |
-| Database Design | Initial schema completed |
-| PostgreSQL Database Setup | Initial setup completed |
-| Backend Development | In Progress |
-| Frontend Development | Planned |
-| AI Integration | Planned |
-| QA Automation | Planned |
+14. Future Improvements
+    Suggest realistic future improvements without presenting them as completed features.
 
----
+15. Learning Outcomes
+    Explain the practical Software Engineering concepts demonstrated by this project.
 
-## 🎓 Learning Outcomes
+16. Author
+    Keep an appropriate author section.
+    Do not invent personal information, links, or qualifications.
 
-This project provides an opportunity to develop practical knowledge and experience in:
+README DESIGN:
+- Use clean Markdown.
+- Use informative headings.
+- Use tables where useful.
+- Use concise professional explanations.
+- Make the README easy to navigate.
+- Avoid unnecessary emojis.
+- Keep it suitable for recruiters and technical reviewers.
 
-- Software Quality Assurance and Testing.
-- Requirements Engineering.
-- Software Architecture and System Design.
-- REST API Development.
-- Node.js and Express.js.
-- PostgreSQL Database Design.
-- Role-Based Access Control.
-- AI-assisted Software Engineering.
-- Git and GitHub Version Control.
-
----
-
-## 👩‍💻 Developer
-
-**Malshi Dewmini**
-
-BSc (Hons) Software Engineering Undergraduate  
-NSBM Green University, Sri Lanka
-
-- GitHub: [malshi783](https://github.com/malshi783)
-- LinkedIn: [Malshi Dewmini](https://linkedin.com/in/malshidewmini)
-- Email: malshi783@gmail.com
-
----
-
-⭐ *Building intelligent tools to explore the future of Software Quality Engineering.*
-
-**Note:** TestPilot-AI is an ongoing development project. Features and architecture may evolve as development progresses.
+FINAL REQUIREMENTS:
+- Preserve accurate existing information.
+- Remove outdated or misleading documentation.
+- Do not expose secrets.
+- Do not modify any file other than the root README.md.
+- Show me a summary of the changes.
+- Verify all commands, routes, and file paths against the actual project.
