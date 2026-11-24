@@ -32,7 +32,7 @@ The application is built with PostgreSQL, Express.js, React.js, and Node.js (PER
 | Authentication | JWT, bcryptjs |
 | API | REST over HTTP/JSON |
 | Development | Git, GitHub, VS Code, Postman |
-AI[Google Gemini API or Local Demo Generator]
+| AI Integration | Google Gemini API |
 
 ## Workflow
 
@@ -53,7 +53,7 @@ flowchart TD
   API --> AUTH[JWT Authentication]
   API --> C[Controllers and Services]
   C --> DB[(PostgreSQL)]
-  C --> AI[Configured AI Provider or Local Demo Generator]
+  C --> C --> AI[Google Gemini API or Local Demo Generator]
   AI --> C
   C --> API
   API --> R
