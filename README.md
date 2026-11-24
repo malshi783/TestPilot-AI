@@ -20,7 +20,7 @@ The application is built with PostgreSQL, Express.js, React.js, and Node.js (PER
 - Dashboard statistics calculated from the latest execution result of each test case.
 - Execution history for the current user.
 
-**AI note:** When `LLM_API_KEY` is empty, the app uses a built-in local demo generator. This is not a live AI response. When the key is configured, the backend calls the configured OpenAI-compatible chat completions endpoint.
+**AI Integration:** TestPilot-AI uses the Google Gemini API to generate test cases from software requirements. A local demo generator is available when the Gemini API key is not configured.
 
 ## Technology Stack
 
@@ -32,6 +32,7 @@ The application is built with PostgreSQL, Express.js, React.js, and Node.js (PER
 | Authentication | JWT, bcryptjs |
 | API | REST over HTTP/JSON |
 | Development | Git, GitHub, VS Code, Postman |
+AI[Google Gemini API or Local Demo Generator]
 
 ## Workflow
 
@@ -104,7 +105,8 @@ TestPilot-AI/
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/malshi783/TestPilot-AI.git
+cd TestPilot-AI
 cd TestPilot-AI
 ```
 
@@ -142,9 +144,9 @@ DB_PASSWORD=your_postgresql_password
 DB_SSL=false
 JWT_SECRET=replace_with_a_long_random_secret
 FRONTEND_ORIGIN=http://localhost:5173,http://localhost:5174
-LLM_API_KEY=
-LLM_BASE_URL=https://api.openai.com/v1
-LLM_MODEL=gpt-4o-mini
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_BASE_URL=https://generativelanguage.googleapis.com/v1beta
+GEMINI_MODEL=your_gemini_model
 ```
 
 Use either `DATABASE_URL` or the individual `DB_*` values. Leave `DATABASE_URL` empty when using the individual settings. Change `DB_PORT` to the port on which your PostgreSQL server is listening.
