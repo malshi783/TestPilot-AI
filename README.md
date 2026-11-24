@@ -269,31 +269,31 @@ Not included in this version:
 ## Application Screenshots
 
 ### 1. Login Page
-![Login Page](screenshots/Screenshot 2026-11-24 164804.png)
+![Login Page](screenshots/Screenshot%202026-11-24%20164804.png)
 
 ### 2. Dashboard
 
 The dashboard provides an overview of test cases and their latest execution results.
 
-![TestPilot-AI Dashboard](screenshots/Screenshot 2026-11-24 164804.png)
+![TestPilot-AI Dashboard](screenshots/Screenshot%202026-11-24%20164804.png)
 
 ### 3. Test Case Studio
 
 Users can submit software requirements and generate test scenarios with Gemini AI assistance.
 
-![Test Case Studio](Screenshot 2026-11-24 164851.png)
+![Test Case Studio](screenshots/Screenshot%202026-11-24%20164851.png)
 
 ### 4. Generated Test Cases
 
 Generated test cases can be reviewed, edited, and saved.
 
-![Generated Test Cases](Screenshot 2026-11-24 164851.png)
+![Generated Test Cases](screenshots/Screenshot%202026-11-24%20164851.png)
 
 ### 5. Test Executions
 
 Users can manually execute test cases and record PASSED, FAILED, and SKIPPED results.
 
-![Test Executions](Screenshot 2026-11-24 164912.png)
+![Test Executions](screenshots/Screenshot%202026-11-24%20164912.png)
 
 ## Author
 
